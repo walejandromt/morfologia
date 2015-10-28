@@ -1,68 +1,27 @@
 # morfologia
 Morfología matemática
 
-
 APLICACIÓN DE ALGORITMOS BÁSICO DE MORFOLOGÍA MATEMÁTICA PARA EL PROCESAMIENTO DE IMÁGENES
 
-Williams Alejandro Martínez*
-DPhil. Eduardo CABAL-YEPEZ**
-
-I.	INTRODUCCIÓN
 La morfología se refiere al estudio de las figuras y ha sido utilizada para interpretar la estructura o forma de objetos en imágenes. 
 Una imagen puede considerarse formada por conjuntos (regiones) de píxeles y, por tanto, pueden aplicarse herramientas de la Teoría de Conjuntos.
- 
-Figura 1. Un ejemplo de imagen escala grises, operaciones básicas de morfológica matemática
-con un elemento estructurante de 3x3. (a) Lena Original (b) Dilatación y (c) Erosión. [2]
+
 II.	OBJETIVO GENERAL
 Aplicación de algoritmos morfológico matemático básico para imágenes médicas a escalas grises.
 
-
-
-Figura 2. Operaciones básicas de Morfología Matemática de Dilatación y Erosión.
 III.	OBJETIVO ESPECÍFICOS
 •	Desarrollar los algoritmos de Dilatación y Erosión.
 •	Aplicación de los algoritmos en imágenes médicas.
 •	Comparación de los resultados con los métodos definidos en MatLab.
 
-IV.	MATERIALES Y MÉTODOS
-MATLAB
-Software proporcionado por la institución, que se utilizó para la realización de este proyecto.
-Morfología Matemática 
-Se usa para extraer componentes de imágenes útiles para la representación y descripción de forma de regiones. Esta puede ser aplicada en diferentes escalas de colores, tales como la Binaria, escala gris y color [1,2].
-Operaciones Básicas
-Dilatación
-La dilatación se describe como un crecimiento de pixeles, Esto permite que aumente un pixel alrededor de la circunferencia de cada región y así poder incrementar dimensiones, lo cual ayuda a rellenar hoyos dentro de la región. La fórmula se expresa de la siguiente manera [2].
- 
-El proceso de dilatación, es comparar el contenido del elemento estructurante con el conjunto imagen, y el cual hay que preguntarse en cada posición que se encuentre el elemento estructurante en la imagen. ¿Hay intersección? – Si la hay, el origen del elemento estructurante pertenece al conjunto dilatado. En la figura 3 se muestra un ejemplo de Dilatación en una imagen binaria.
- 
-Figura 3. Ejemplo de Dilatación a una imagen a binaria con un 1x3.
-
-
-
-
 Erosión
 La erosión se describe como la diminución de pixeles, Esto permite que se reduzca un pixel alrededor de la circunferencia de cada región y así poder quitar dimensión al conjunto, lo cual ayuda a eliminar ruido dentro de la región [2].
+ Para el proceso de erosión, al comparar el elemento estructurante, hay que preguntarse. ¿Está totalmente contenido? – Si el elemento estructurante está completamente dentro del conjunto imagen, entonces el origen pertenece al conjunto erosionado. Se muestra en la figura 4 un ejemplo de Erosión en una imagen binaria. 
  
-Para el proceso de erosión, al comparar el elemento estructurante, hay que preguntarse. ¿Está totalmente contenido? – Si el elemento estructurante está completamente dentro del conjunto imagen, entonces el origen pertenece al conjunto erosionado. Se muestra en la figura 4 un ejemplo de Erosión en una imagen binaria. 
- 
-Figura 4. Ejemplo de Erosión a una imagen a binaria con un 1x3.
-V.	RESULTADOS
+ V.	RESULTADOS
 Comparamos los resultados con imágenes médicas que se extrajeron de la base de datos Artery Transversal [4] y Fingerprint [5], a las cuales se les aplicaron los algoritmos realizados y los algoritmos de MatLab.
 Resultado 1. Dilatación y Erosión.
  
-Figura 5. Resultados (a) Imagen Dilatada y (b) Erosión.
-Ultrasonix of the Artery Transversal [4].
-Resultado 2. Dilatación y Erosión
- 
-Figura 5. Ultrasonido de corte perpendicular de una arteria.
-Resultados (a) Imagen Dilatada y (b) Erosión.
-El anillo de la arteria se aclara más con el algoritmo. [4]
-
-Resultado 3. Dilatación y Erosión
- 
-Figura 5. Fingerprint capturado con un sensor SFinGe v2.51.
-Resultados (a) Imagen Dilatada y (b) Erosión. [5]
-
 VI.	CONCLUSIONES
 En este trabajo, se muestra los resultados obtenidos de un algoritmo para realizar las operaciones básicas de morfología matemática en imágenes. El algoritmo propuesto se analizó y comparó con las librerías especializadas de MatLab. 
 De los resultados obtenidos se observa cualitativamente que el algoritmo propuesto obtiene imágenes más claras en las bases de datos Artery Transversal y Fingerprint. Cabe mencionar que la morfología es un método muy fiable, que consume muy pocos recursos, en comparación con algoritmos de inteligencia artificial para resolver estos tipos de problemas como la detención de bordes, la eliminación de ruido, la unión de islas, etc. Se encontró implementaciones de algoritmos que son competitivos, tanto en términos de velocidad y precisión. Se necesitan más pruebas para evaluar si la precisión de la estimación de erosión y dilatación se ve reforzada si aplicamos el algoritmo propuesto directamente en las imágenes en escala de grises; sin ningún pre-procesamiento como binarización o escalamiento, según el tipo de datos. Como trabajo futuro se propone mejorar el algoritmo propuesto y su posible implementación en un dispositivo FPGA para procesamiento en tiempo real.
