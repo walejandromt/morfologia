@@ -1,2 +1,0 @@
-# morfologia
-Morfología matemática
